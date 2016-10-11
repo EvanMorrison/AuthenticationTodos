@@ -1,0 +1,14 @@
+<div class="row">
+    <form >
+        <div class="form-inline">
+            <label class="control-label">New todo: </label>
+            <input type="text" class="form-control" placeholder="todo" ng-model="todo.title">
+               <button type="submit" class="btn btn-primary" ng-click="saveTodo(todo.title)">add</button>
+        </div>
+    </form>
+    <div class="col-md-4" ng-repeat="todo in todos">
+        <h3>{{todo.title}}</h3>
+
+        <p>Status: <span ng-if="todo.completed">completed</span><span ng-if="!todo.completed">not complete</span></p>
+    </div>
+</div>
